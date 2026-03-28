@@ -57,12 +57,19 @@ section h3 {
   color: #1a237e;
 }
 
+/* ...existing code... */
 .activity-card {
   margin-bottom: 15px;
-  padding: 15px;
+  padding: 18px 18px 12px 18px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 7px;
   background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(26,35,126,0.07);
+  transition: box-shadow 0.2s;
+}
+
+.activity-card:hover {
+  box-shadow: 0 4px 16px rgba(26,35,126,0.13);
 }
 
 .activity-card h4 {
@@ -72,6 +79,48 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.participants-section {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e3eafc;
+  border-radius: 5px;
+  border: 1px solid #c5cae9;
+}
+
+.participants-section strong {
+  color: #1a237e;
+  font-size: 15px;
+}
+
+.participants-list {
+  margin: 8px 0 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.participant-item {
+  color: #3949ab;
+  font-size: 15px;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+
+.delete-participant {
+  margin-left: 8px;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 17px;
+  transition: color 0.2s, transform 0.2s;
+  user-select: none;
+}
+.delete-participant:hover {
+  color: #ff1744;
+  transform: scale(1.2) rotate(-10deg);
 }
 
 .form-group {
